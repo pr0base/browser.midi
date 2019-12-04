@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>sprite.test</title>
+
+	<!-- UIkit CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.4/dist/css/uikit.min.css" />
+
+	<!-- UIkit JS -->
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.4/dist/js/uikit.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.4/dist/js/uikit-icons.min.js"></script>
+
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+	<script src="libraries/p5.js"></script>
+	<script src="libraries/p5.dom.js"></script>
+	<script src="libraries/p5.sound.js"></script>
+	<!-- <script src="sketch.js"></script> -->
+	
+	<script src="./modules/sprites-space-invader.js"></script>
+	<script src="midi.js"></script>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+
+		canvas {
+			margin: auto;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
+
+
+
+		<div class="uk-grid" data-uk-grid-margin>
+			<div class="uk-width-medium-3-4">
+			</div>
+			<div class="uk-grid-small uk-child-width-expand@s uk-text-center" uk-grid>
+				<div>
+					<div class="uk-card uk-card-default uk-card-body" onclick="sendPattern(1);">Turtle</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-body" onclick="sendPattern(2);">Bug</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-body" onclick="sendPattern(3);">Cowboy</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-body" onclick="sendPattern(4);">Squid</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-body" onclick="animateSprite();">animate</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-body" onclick="doScroll();">scroll</div>
+				</div>
+
+			</div>
+
+		</div>
+		<div class="uk-grid">
+			<div class="uk-width-medium-1-2">
+				<div class="uk-panel" id="midi"></div>
+			</div>
+			<div class="uk-width-medium-1-2">
+				<div class="uk-panel">...</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
